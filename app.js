@@ -1,31 +1,40 @@
 
 
-let selectedTarget;
+const previousTabContainer = document.querySelector('.tab_menu .previous_tab')
 
-
-
-const allElements = document.querySelectorAll('div > *')
+const addNewTabSpan = document.querySelector('.tab_menu .add_new_tab')
 
 
 
 
+addNewTabSpan.addEventListener('click', () => {
+    
 
-allElements.forEach((element, index) => {
+   handleNewTab()
+    
 
-    element.addEventListener('click', (ev) => {
-
-
-        // console.log(ev.target)
-
-        selectedTarget = ev.target
-        console.log(selectedTarget)
-
-       
-        selectedTarget.classList.toggle('parent')
-        
-
-    })
-} )
+})
 
 
+function handleNewTab () {
+    const span = document.createElement('span')
+    span.textContent = 'New Tab'
+    previousTabContainer.appendChild(span)
+    
+    handleTabActiveClass ()
+}
 
+
+
+ function handleTabActiveClass () {
+        const tabItems = previousTabContainer.querySelectorAll('span')
+        console.log(tabItems)
+        tabItems.forEach(item => {
+            item.addEventListener('click', (ev) => {
+                ev.target.classList.add('tab_active')
+            })
+        })
+ }
+
+
+handleTabActiveClass ()

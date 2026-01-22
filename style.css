@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Special+Gothic+Expanded+One&display=swap');
 
 
 * {
@@ -8,6 +8,20 @@
   outline: none;
   list-style: none;
   text-decoration: none;
+}
+
+.quicksand-auto {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.quicksand-bolder {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 :root {
@@ -39,4 +53,34 @@ nav ul li a {
   display: block;
    color: var(--bg-light-85);
    padding: 4px 15px;
+}
+
+.tab_menu {
+
+  width: 100%;
+  padding: 8px;
+  margin-left: 10px;
+  background-color: hsl(145, 89%, 20%);
+  display: flex;
+  column-gap: 15px;
+}
+
+.tab_menu span {
+  background-color: hsl(145, 89%, 15%);
+  padding: 12px;
+}
+
+.tab_menu .previous_tab {
+  display: flex;
+  column-gap: 5px;
+}
+
+
+.tab_menu span.add_new_tab {
+  border-radius: 25px;
+}
+
+.previous_tab span.tab_active{
+   background-color: hsl(34, 91%, 47%);
+   color: var(--bg-dark);
 }
