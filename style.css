@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+
 * {
   padding: 0;
   margin: 0;
@@ -12,23 +15,28 @@
   --background: #21282e;
   --bg-dark: hsl(120, 6%, 7%);
   --text-white: hsl(50, 41%, 81%);
+   --bg-light-85: hsl(0, 0%, 85%);
 }
 
 
 body {
   background-color: var(--bg-dark);
   user-select: none;
-  color: var(--text-white);
+  color: var(--bg-light-85);
   transition: all 0.3s;
-
-  
+  font-family: "Special Gothic Expanded One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.parent {
-  border: 2px solid rgb(198, 240, 198);
-  display: inline-block;
+nav ul {
+  display: flex;
+
 }
 
-span, h1, p {
-  padding: 12px;
+
+nav ul li a {
+  display: block;
+   color: var(--bg-light-85);
+   padding: 4px 15px;
 }
